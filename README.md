@@ -6,5 +6,5 @@ This repo contains dictionary words for concepts and terms touched upon the [Lig
 
 ## Table of contents 
 
-* Week 1 
-  * Day 1
+* [Week 1](/Week_1)
+  * [Day 1](/Week_1/Day_1)
