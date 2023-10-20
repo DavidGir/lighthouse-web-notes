@@ -1,0 +1,130 @@
+### Day 4 Bootcamp Dictionary
+---
+### JavaScript Functions and Callbacks
+
+1. **Callback Function**
+    - **What**: A function passed into another function as an argument.
+    - **Why**: Enables more dynamic and asynchronous behavior by deferring the execution until the host function decides to call it.
+    - **How**: Declare a function and pass it as an argument to another function. The host function then calls the callback function at an appropriate time.
+    - **Code**: 
+      ```javascript
+      function doSomething(callback) {
+        // Some operation
+        callback();
+      }
+      ```
+    
+2. **Arrow Function**
+    - **What**: A shorter syntax for writing function expressions in JavaScript.
+    - **Why**: Useful for writing concise code and does not have its own `this`, making it ideal for certain scenarios.
+    - **How**: Use `=>` between the parameter and the function body.
+    - **Code**: 
+      ```javascript
+      const add = (a, b) => a + b;
+      ```
+
+---
+
+### Array Methods and Iteration
+
+1. **forEach Method**
+    - **What**: A built-in JavaScript array method used to iterate over all elements in an array.
+    - **Why**: Simplifies iterating over arrays and executing a function on each element.
+    - **How**: Call `.forEach()` on an array and pass a function as an argument.
+    - **Code**: 
+      ```javascript
+      [1, 2, 3].forEach(item => console.log(item));
+      ```
+      
+2. **map Method**
+    - **What**: A JavaScript array method that creates a new array by applying a function to each element of an existing array.
+    - **Why**: Useful for generating new arrays based on transformations, without altering the original array.
+    - **How**: Use `.map()` on an array and pass a function as an argument.
+    - **Code**: 
+      ```javascript
+      const doubled = [1, 2, 3].map(x => x * 2);
+      ```
+
+3. **filter Method**
+    - **What**: A JavaScript array method that returns a new array containing elements that pass a specified test.
+    - **Why**: Handy for creating sub-arrays based on some condition, without modifying the original array.
+    - **How**: Call `.filter()` on an array and pass a function as an argument.
+    - **Code**: 
+      ```javascript
+      const evens = [1, 2, 3].filter(x => x % 2 === 0);
+      ```
+
+---
+
+### Object Manipulation and Security
+
+1. **hasOwnProperty**
+    - **What**: A JavaScript object method that checks if an object has a specific, non-inherited property.
+    - **Why**: Useful for ensuring you're not mistakenly accessing inherited properties, thereby avoiding potential errors or vulnerabilities.
+    - **How**: Use `.hasOwnProperty()` or `Object.prototype.hasOwnProperty.call()` on an object.
+    - **Code**: 
+      ```javascript
+      const obj = { a: 1 };
+      console.log(obj.hasOwnProperty('a')); // true
+      ```
+    
+2. **Prototype Pollution**
+    - **What**: A security vulnerability where an attacker can manipulate the properties of `Object.prototype`.
+    - **Why**: This can lead to a wide range of security issues, including unauthorized access and data manipulation.
+    - **How**: Be cautious when manipulating properties directly on objects or when using methods like `Object.assign()`.
+
+---
+
+### Command-Line and Environment
+
+1. **Command-line Arguments**
+    - **What**: These are parameters or flags passed to a script in the command line.
+    - **Why**: Allows for dynamic behavior of scripts without altering the internal code.
+    - **How**: In Node.js, command-line arguments can be accessed via `process.argv`.
+    - **Code**: 
+      ```javascript
+      const args = process.argv.slice(2);
+      ```
+
+2. **Environment Variables**
+    - **What**: Variables set outside of the application that can be used inside the application.
+    - **Why**: Useful for storing sensitive information or settings that differ between development environments.
+    - **How**: Accessed in Node.js through `process.env`.
+
+---
+
+### Software Design Principles
+
+1. **Single Responsibility Principle**
+    - **What**: A principle in software design stating that a function or class should have only one reason to change.
+    - **Why**: Enhances readability, maintainability, and testability by keeping functions focused on a single task.
+    - **How**: Identify responsibilities and break down larger functions into smaller, more focused functions.
+
+
+2. **DRY (Don't Repeat Yourself)**
+    - **What**: A principle that suggests avoiding the repetition of code within a software system.
+    - **Why**: Helps in reducing duplication, which makes the code easier to maintain, understand, and debug.
+    - **How**: Whenever you find yourself writing the same or very similar code in multiple places, consider refactoring by creating reusable functions or modules.
+    - **Code**: 
+      ```javascript
+      // Before DRY
+      const areaSquare = (side) => side * side;
+      const areaRectangle = (width, height) => width * height;
+      
+      // After DRY
+      const area = (width, height = width) => width * height;
+      ```
+      
+3. **FOCAL (First-order Computation and Logic)**
+    - **What**: An early high-level programming language that emphasized simple syntax and ease of use. Now, it often refers to focusing on primary computation and logic within a system.
+    - **Why**: Emphasizes the importance of having a well-thought-out primary logic in any application, which aids in scaling and maintenance.
+    - **How**: Identify the core logic of your application and make sure it's robust and well-designed. Other functionalities should be built around this core logic.
+    - **Code**: 
+      ```javascript
+      // Core logic function for a banking app
+      const transferFunds = (fromAccount, toAccount, amount) => {
+        // Core logic here
+      };
+      ```
+
+

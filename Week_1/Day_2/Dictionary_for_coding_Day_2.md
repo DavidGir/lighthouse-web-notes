@@ -1,5 +1,5 @@
 ### Day 2 Bootcamp Dictionary
-
+---
 ### JavaScript Basics
 
 #### Incremental Development

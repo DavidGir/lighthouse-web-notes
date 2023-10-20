@@ -1,3 +1,6 @@
+### Day 1 Bootcamp Dictionary
+---
+
 ### Callback Function
 **Definition**: A function you give to another function to be run later. Used often in JavaScript to handle things like events or asynchronous operations.
 
